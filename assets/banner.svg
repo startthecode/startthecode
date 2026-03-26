@@ -1,0 +1,314 @@
+<svg width="900" height="280" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
+
+      .matrix-char { font-family: 'Share Tech Mono', 'Courier New', monospace; font-size: 13px; fill: #00ff41; }
+      .matrix-char-dim { font-family: 'Share Tech Mono', 'Courier New', monospace; font-size: 13px; fill: #004d12; }
+
+      .name-text {
+        font-family: 'Share Tech Mono', 'Courier New', monospace;
+        font-size: 48px;
+        font-weight: 900;
+        letter-spacing: 4px;
+        fill: #00ffe5;
+      }
+      .name-glow {
+        font-family: 'Share Tech Mono', 'Courier New', monospace;
+        font-size: 48px;
+        font-weight: 900;
+        letter-spacing: 4px;
+        fill: none;
+        stroke: #00ffe5;
+        stroke-width: 0.5;
+        filter: url(#neonBlue);
+      }
+      .subtitle {
+        font-family: 'Share Tech Mono', 'Courier New', monospace;
+        font-size: 15px;
+        fill: #b266ff;
+        letter-spacing: 8px;
+      }
+      .tag-text {
+        font-family: 'Share Tech Mono', 'Courier New', monospace;
+        font-size: 11px;
+        fill: #00ff41;
+        letter-spacing: 2px;
+      }
+      .border-line { stroke: #00ffe5; stroke-width: 1; fill: none; opacity: 0.6; }
+      .corner { stroke: #00ffe5; stroke-width: 2; fill: none; }
+      .scan-line { fill: rgba(0,255,229,0.03); }
+    </style>
+
+    <filter id="neonBlue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur1"/>
+      <feGaussianBlur stdDeviation="8" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="neonGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glitch">
+      <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="1" result="noise">
+        <animate attributeName="baseFrequency" values="0.05;0.08;0.04;0.06;0.05" dur="0.3s" begin="2s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G">
+        <animate attributeName="scale" values="0;0;0;8;0;0;6;0;0;0;4;0" dur="4s" begin="1s" repeatCount="indefinite"/>
+      </feDisplacementMap>
+    </filter>
+
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050d0a"/>
+      <stop offset="50%" style="stop-color:#080818"/>
+      <stop offset="100%" style="stop-color:#050d0a"/>
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ffe5;stop-opacity:0"/>
+      <stop offset="30%" style="stop-color:#00ffe5;stop-opacity:1"/>
+      <stop offset="70%" style="stop-color:#b266ff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#b266ff;stop-opacity:0"/>
+    </linearGradient>
+
+    <clipPath id="svgClip">
+      <rect width="900" height="280"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="280" fill="url(#bgGrad)"/>
+
+  <!-- Matrix rain columns - clipped -->
+  <g clip-path="url(#svgClip)">
+    <!-- Col 1 -->
+    <text class="matrix-char-dim" x="18" y="20">A</text>
+    <text class="matrix-char-dim" x="18" y="34">9</text>
+    <text class="matrix-char" x="18" y="48">F</text>
+    <text class="matrix-char-dim" x="18" y="62">3</text>
+    <text class="matrix-char-dim" x="18" y="76">K</text>
+    <text class="matrix-char-dim" x="18" y="90">7</text>
+    <text class="matrix-char-dim" x="18" y="104">B</text>
+    <text class="matrix-char-dim" x="18" y="118">2</text>
+    <text class="matrix-char" x="18" y="132">1</text>
+    <text class="matrix-char-dim" x="18" y="146">P</text>
+    <text class="matrix-char-dim" x="18" y="160">Q</text>
+    <text class="matrix-char-dim" x="18" y="174">R</text>
+    <text class="matrix-char" x="18" y="188">0</text>
+    <text class="matrix-char-dim" x="18" y="202">X</text>
+    <text class="matrix-char-dim" x="18" y="216">5</text>
+    <text class="matrix-char-dim" x="18" y="230">Z</text>
+    <text class="matrix-char-dim" x="18" y="244">8</text>
+    <text class="matrix-char" x="18" y="258">M</text>
+    <text class="matrix-char-dim" x="18" y="272">4</text>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,280;0,0" dur="3.2s" repeatCount="indefinite" additive="sum"/>
+
+    <!-- Col 2 -->
+    <text class="matrix-char" x="38" y="0">7</text>
+    <text class="matrix-char-dim" x="38" y="14">J</text>
+    <text class="matrix-char-dim" x="38" y="28">A</text>
+    <text class="matrix-char" x="38" y="42">V</text>
+    <text class="matrix-char-dim" x="38" y="56">A</text>
+    <text class="matrix-char-dim" x="38" y="70">8</text>
+    <text class="matrix-char" x="38" y="84">S</text>
+    <text class="matrix-char-dim" x="38" y="98">P</text>
+    <text class="matrix-char-dim" x="38" y="112">R</text>
+    <text class="matrix-char" x="38" y="126">I</text>
+    <text class="matrix-char-dim" x="38" y="140">N</text>
+    <text class="matrix-char-dim" x="38" y="154">G</text>
+    <text class="matrix-char" x="38" y="168">3</text>
+    <text class="matrix-char-dim" x="38" y="182">2</text>
+    <text class="matrix-char-dim" x="38" y="196">1</text>
+    <text class="matrix-char" x="38" y="210">K</text>
+    <text class="matrix-char-dim" x="38" y="224">9</text>
+    <text class="matrix-char-dim" x="38" y="238">F</text>
+    <text class="matrix-char" x="38" y="252">0</text>
+    <animateTransform attributeName="transform" type="translate" values="0,-60;0,220;0,-60" dur="2.7s" repeatCount="indefinite" additive="sum"/>
+
+    <!-- Col 3 -->
+    <text class="matrix-char-dim" x="58" y="10">R</text>
+    <text class="matrix-char" x="58" y="24">E</text>
+    <text class="matrix-char-dim" x="58" y="38">A</text>
+    <text class="matrix-char-dim" x="58" y="52">C</text>
+    <text class="matrix-char" x="58" y="66">T</text>
+    <text class="matrix-char-dim" x="58" y="80">5</text>
+    <text class="matrix-char-dim" x="58" y="94">Q</text>
+    <text class="matrix-char" x="58" y="108">2</text>
+    <text class="matrix-char-dim" x="58" y="122">N</text>
+    <text class="matrix-char-dim" x="58" y="136">7</text>
+    <text class="matrix-char" x="58" y="150">B</text>
+    <text class="matrix-char-dim" x="58" y="164">L</text>
+    <text class="matrix-char-dim" x="58" y="178">0</text>
+    <text class="matrix-char" x="58" y="192">C</text>
+    <text class="matrix-char-dim" x="58" y="206">K</text>
+    <text class="matrix-char-dim" x="58" y="220">8</text>
+    <text class="matrix-char" x="58" y="234">1</text>
+    <text class="matrix-char-dim" x="58" y="248">W</text>
+    <text class="matrix-char-dim" x="58" y="262">6</text>
+    <animateTransform attributeName="transform" type="translate" values="0,-120;0,160;0,-120" dur="4.1s" repeatCount="indefinite" additive="sum"/>
+
+    <!-- Right side columns -->
+    <text class="matrix-char" x="842" y="15">D</text>
+    <text class="matrix-char-dim" x="842" y="29">B</text>
+    <text class="matrix-char-dim" x="842" y="43">5</text>
+    <text class="matrix-char" x="842" y="57">A</text>
+    <text class="matrix-char-dim" x="842" y="71">P</text>
+    <text class="matrix-char-dim" x="842" y="85">I</text>
+    <text class="matrix-char" x="842" y="99">9</text>
+    <text class="matrix-char-dim" x="842" y="113">J</text>
+    <text class="matrix-char-dim" x="842" y="127">W</text>
+    <text class="matrix-char" x="842" y="141">T</text>
+    <text class="matrix-char-dim" x="842" y="155">6</text>
+    <text class="matrix-char-dim" x="842" y="169">0</text>
+    <text class="matrix-char" x="842" y="183">K</text>
+    <text class="matrix-char-dim" x="842" y="197">N</text>
+    <text class="matrix-char-dim" x="842" y="211">3</text>
+    <text class="matrix-char" x="842" y="225">8</text>
+    <text class="matrix-char-dim" x="842" y="239">Z</text>
+    <text class="matrix-char-dim" x="842" y="253">2</text>
+    <text class="matrix-char" x="842" y="267">Q</text>
+    <animateTransform attributeName="transform" type="translate" values="0,-40;0,240;0,-40" dur="3.5s" repeatCount="indefinite" additive="sum"/>
+
+    <text class="matrix-char-dim" x="862" y="5">F</text>
+    <text class="matrix-char" x="862" y="19">U</text>
+    <text class="matrix-char-dim" x="862" y="33">L</text>
+    <text class="matrix-char-dim" x="862" y="47">L</text>
+    <text class="matrix-char" x="862" y="61">S</text>
+    <text class="matrix-char-dim" x="862" y="75">T</text>
+    <text class="matrix-char-dim" x="862" y="89">A</text>
+    <text class="matrix-char" x="862" y="103">C</text>
+    <text class="matrix-char-dim" x="862" y="117">K</text>
+    <text class="matrix-char-dim" x="862" y="131">4</text>
+    <text class="matrix-char" x="862" y="145">7</text>
+    <text class="matrix-char-dim" x="862" y="159">X</text>
+    <text class="matrix-char-dim" x="862" y="173">1</text>
+    <text class="matrix-char" x="862" y="187">R</text>
+    <text class="matrix-char-dim" x="862" y="201">9</text>
+    <text class="matrix-char-dim" x="862" y="215">6</text>
+    <text class="matrix-char" x="862" y="229">M</text>
+    <text class="matrix-char-dim" x="862" y="243">3</text>
+    <text class="matrix-char-dim" x="862" y="257">V</text>
+    <animateTransform attributeName="transform" type="translate" values="0,-100;0,180;0,-100" dur="2.9s" repeatCount="indefinite" additive="sum"/>
+
+    <text class="matrix-char-dim" x="882" y="25">J</text>
+    <text class="matrix-char" x="882" y="39">W</text>
+    <text class="matrix-char-dim" x="882" y="53">T</text>
+    <text class="matrix-char-dim" x="882" y="67">8</text>
+    <text class="matrix-char" x="882" y="81">G</text>
+    <text class="matrix-char-dim" x="882" y="95">0</text>
+    <text class="matrix-char-dim" x="882" y="109">5</text>
+    <text class="matrix-char" x="882" y="123">N</text>
+    <text class="matrix-char-dim" x="882" y="137">Q</text>
+    <text class="matrix-char-dim" x="882" y="151">2</text>
+    <text class="matrix-char" x="882" y="165">7</text>
+    <text class="matrix-char-dim" x="882" y="179">B</text>
+    <text class="matrix-char-dim" x="882" y="193">A</text>
+    <text class="matrix-char" x="882" y="207">K</text>
+    <text class="matrix-char-dim" x="882" y="221">E</text>
+    <text class="matrix-char-dim" x="882" y="235">N</text>
+    <text class="matrix-char" x="882" y="249">D</text>
+    <text class="matrix-char-dim" x="882" y="263">6</text>
+    <text class="matrix-char" x="882" y="277">Z</text>
+    <animateTransform attributeName="transform" type="translate" values="0,-170;0,110;0,-170" dur="3.8s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- Scanlines overlay -->
+  <rect width="900" height="2" y="20" class="scan-line"/>
+  <rect width="900" height="2" y="40" class="scan-line"/>
+  <rect width="900" height="2" y="60" class="scan-line"/>
+  <rect width="900" height="2" y="80" class="scan-line"/>
+  <rect width="900" height="2" y="100" class="scan-line"/>
+  <rect width="900" height="2" y="120" class="scan-line"/>
+  <rect width="900" height="2" y="140" class="scan-line"/>
+  <rect width="900" height="2" y="160" class="scan-line"/>
+  <rect width="900" height="2" y="180" class="scan-line"/>
+  <rect width="900" height="2" y="200" class="scan-line"/>
+  <rect width="900" height="2" y="220" class="scan-line"/>
+  <rect width="900" height="2" y="240" class="scan-line"/>
+  <rect width="900" height="2" y="260" class="scan-line"/>
+
+  <!-- Moving scan beam -->
+  <rect width="900" height="4" fill="rgba(0,255,229,0.06)" y="0">
+    <animate attributeName="y" values="-4;284;-4" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Top border line (animated gradient) -->
+  <rect x="0" y="0" width="900" height="2" fill="url(#borderGrad)">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Bottom border line -->
+  <rect x="0" y="278" width="900" height="2" fill="url(#borderGrad)">
+    <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Corner brackets - Top Left -->
+  <polyline points="10,30 10,10 30,10" class="corner">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/>
+  </polyline>
+  <!-- Corner brackets - Top Right -->
+  <polyline points="870,10 890,10 890,30" class="corner">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/>
+  </polyline>
+  <!-- Corner brackets - Bottom Left -->
+  <polyline points="30,270 10,270 10,250" class="corner">
+    <animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/>
+  </polyline>
+  <!-- Corner brackets - Bottom Right -->
+  <polyline points="870,270 890,270 890,250" class="corner">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+  </polyline>
+
+  <!-- STATUS indicator top right -->
+  <circle cx="856" cy="22" r="4" fill="#00ff41">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <text x="866" y="27" font-family="'Courier New', monospace" font-size="10" fill="#00ff41" letter-spacing="1">ONLINE</text>
+
+  <!-- Top system label -->
+  <text x="20" y="25" font-family="'Courier New', monospace" font-size="10" fill="#00ffe5" opacity="0.6" letter-spacing="2">SYS://PROFILE_v2.6.0</text>
+
+  <!-- Glitch name - shadow layer red -->
+  <text class="name-text" x="450" y="135" text-anchor="middle" fill="#ff003c" opacity="0.4" filter="url(#glitch)">ASHISH KUMAR GOLA</text>
+  <!-- Glitch name - shadow layer cyan offset -->
+  <text class="name-text" x="452" y="133" text-anchor="middle" fill="#00ffe5" opacity="0.3">ASHISH KUMAR GOLA</text>
+  <!-- Main glow layer -->
+  <text class="name-glow" x="450" y="135" text-anchor="middle" filter="url(#neonBlue)">ASHISH KUMAR GOLA</text>
+  <!-- Main solid layer -->
+  <text class="name-text" x="450" y="135" text-anchor="middle">ASHISH KUMAR GOLA</text>
+
+  <!-- Blinking cursor after name -->
+  <rect x="734" y="110" width="3" height="32" fill="#00ffe5">
+    <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Subtitle -->
+  <text class="subtitle" x="450" y="172" text-anchor="middle" filter="url(#neonGreen)">
+    FULL STACK ENGINEER
+    <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Horizontal divider lines -->
+  <line x1="80" y1="185" x2="380" y2="185" stroke="#00ffe5" stroke-width="0.5" opacity="0.4"/>
+  <line x1="520" y1="185" x2="820" y2="185" stroke="#b266ff" stroke-width="0.5" opacity="0.4"/>
+  <text x="450" y="190" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#00ffe5" opacity="0.7">◆</text>
+
+  <!-- Tags row -->
+  <text class="tag-text" x="105" y="220" filter="url(#neonGreen)">[ REACT ]</text>
+  <text class="tag-text" x="230" y="220" filter="url(#neonGreen)">[ SPRING BOOT ]</text>
+  <text class="tag-text" x="390" y="220" filter="url(#neonGreen)">[ JWT ]</text>
+  <text class="tag-text" x="500" y="220" filter="url(#neonGreen)">[ POSTGRESQL ]</text>
+  <text class="tag-text" x="660" y="220" filter="url(#neonGreen)">[ MICROSERVICES ]</text>
+
+  <!-- Bottom system labels -->
+  <text x="20" y="265" font-family="'Courier New', monospace" font-size="9" fill="#00ff41" opacity="0.5" letter-spacing="1">INDIA / DUBAI / INTERNATIONAL</text>
+  <text x="880" y="265" font-family="'Courier New', monospace" font-size="9" fill="#b266ff" opacity="0.5" letter-spacing="1" text-anchor="end">OPEN_TO_WORK::TRUE</text>
+</svg>
