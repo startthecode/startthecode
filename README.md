@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com//startthecode/startthecode/tree/main/assets/banner.svg" width="100%" alt="Ashish Kumar Gola Banner"/>
+  <img src="https://raw.githubusercontent.com/startthecode/startthecode/main/assets/banner.svg" width="100%" alt="Ashish Kumar Gola Banner"/>
 </p>
 
 <p align="center">
