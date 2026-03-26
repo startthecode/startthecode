@@ -128,22 +128,10 @@ Features →  Short-lived JWTs · Long-lived UUID refresh tokens (DB)
 
 ## `> github stats --full`
 
-<p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=startthecode&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffe5&icon_color=b266ff&text_color=c9d1d9&ring_color=00ffe5"/>
-  &nbsp;
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=startthecode&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffe5&text_color=c9d1d9"/>
-</p>
+
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=startthecode&theme=tokyonight&hide_border=true&background=0d1117&stroke=00ffe5&ring=b266ff&fire=ff6e6e&currStreakLabel=00ffe5&sideLabels=00ffe5&dates=c9d1d9" width="49%"/>
-</p>
-
----
-
-## `> trophy --display`
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=startthecode&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=6"/>
+  <img src="https://streak-stats.demolab.com/?user=startthecode&theme=tokyonight&hide_border=true&background=0d1117&stroke=00ffe5&ring=b266ff&fire=ff6e6e&currStreakLabel=00ffe5&sideLabels=00ffe5&dates=c9d1d9" width="49%"/>
 </p>
 
 ---
@@ -152,14 +140,6 @@ Features →  Short-lived JWTs · Long-lived UUID refresh tokens (DB)
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=startthecode&bg_color=0d1117&color=00ffe5&line=b266ff&point=00ff41&area=true&area_color=00ffe510&hide_border=true&custom_title=Contribution+Activity+Graph" width="95%"/>
-</p>
-
----
-
-## `> snake --eat-contributions`
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/startthecode/startthecode/output/github-contribution-grid-snake-dark.svg" alt="Snake eating contributions"/>
 </p>
 
 ---
